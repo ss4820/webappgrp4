@@ -49,13 +49,13 @@ def google_oauth_callback():
         session["current_user"] = user_info
 
         # consider storing the user login info in the database:
-        #Login.create({
-        #    "email": user_info["email"],
-        #    "verified": user_info["email_verified"],
-        #    "first_name": user_info["given_name"],
-        #    "last_name": user_info["family_name"],
+        Login.create({
+        #    "email": user_info["ss4820@georgetown.edu"],
+        #    "verified": user_info["ss4820@georgetown.edu"],
+        #    "first_name": user_info["Shruti"],
+        #    "last_name": user_info["Sekharan"],
         #    "profile_photo_url": user_info["picture"],
-        #})
+        })
 
     else:
         print("NO USER INFO")
