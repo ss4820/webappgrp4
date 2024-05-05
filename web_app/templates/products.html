@@ -4,6 +4,9 @@
 
 {% block content %}
 
+<!-- Hero Image Section -->
+<div class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?product'); height: 300px; background-size: cover; background-position: center;"></div>
+
 <div class="container py-5">
     <h1 class="text-center">Products</h1>
     <p class="lead text-center">Explore our wide range of products.</p>
@@ -12,7 +15,7 @@
     <div class="row">
         {% for product in products %}
         <div class="col-md-4 mb-4">
-            <div class="card h-100" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="card h-100" style="border-radius: 10px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); transition: transform .2s;">
                 <img class="card-img-top" src="{{ product.url }}" alt="Image of {{ product.name }}" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
@@ -35,5 +38,15 @@
     <p class="text-center">Oops, no products found. Please check back later.</p>
     {% endif %}
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.addEventListener('mouseover', () => card.style.transform = 'scale(1.05)');
+        card.addEventListener('mouseout', () => card.style.transform = 'scale(1)');
+    });
+});
+</script>
 
 {% endblock %}
