@@ -9,14 +9,14 @@
 
 {% block content %}
 
-    <div class="container" style="max-width: 350px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <div class="container" style="max-width: 350px;">
         <h1>Login</h1>
 
         <p class="lead mb-3">For new or existing users.</p>
 
         <div class="d-grid gap-2">
-            <a href="/auth/google/login" class="google-login-button btn btn-block position-relative" style="background-color: #0056b3; color: #fff; border: none; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
-                <span class="google-login-button-wrapper position-absolute top-50 start-0 translate-middle-y" style="left: 15px;">
+            <a href="/auth/google/login" class="google-login-button btn btn-block position-relative">
+                <span class="google-login-button-wrapper position-absolute top-50 start-0 translate-middle-y">
                     <img class="google-logo"
                         src="{{ url_for('static', filename='google-button/rainbow-g-logo.svg') }}"
                         alt="Rainbow G Logo"
