@@ -54,7 +54,7 @@ def google_oauth_callback():
         "verified": user_info["sekharan0906@gmail.com"],
         "first_name": user_info["Shruti"],
         "last_name": user_info["Sekharan"],
-       # "profile_photo_url": user_info["picture"],
+        "profile_photo_url": user_info["picture"],
         })
 
     else:
