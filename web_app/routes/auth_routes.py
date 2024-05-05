@@ -50,11 +50,11 @@ def google_oauth_callback():
 
         # consider storing the user login info in the database:
         Login.create({
-        #    "email": user_info["ss4820@georgetown.edu"],
-        #    "verified": user_info["ss4820@georgetown.edu"],
-        #    "first_name": user_info["Shruti"],
-        #    "last_name": user_info["Sekharan"],
-        #    "profile_photo_url": user_info["picture"],
+           "email": user_info["ss4820@georgetown.edu"],
+           "verified": user_info["ss4820@georgetown.edu"],
+            "first_name": user_info["Shruti"],
+           "last_name": user_info["Sekharan"],
+          "profile_photo_url": user_info["picture"],
         })
 
     else:
