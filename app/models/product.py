@@ -68,10 +68,5 @@ if __name__ == "__main__":
         "price":3.99,
         "description":"organic with leaves",
         "url": "https://images.unsplash.com/photo-1639588473831-dd9d014646ae?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        
-        "name": "Watermelong",
-        "price":4.89,
-        "description":"vine like water melon",
-        "url": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
     Product.create(params)
