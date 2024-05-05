@@ -5,48 +5,64 @@
 {% block content %}
 
 <!-- Hero Section -->
-<div class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?gourmet'); height: 400px; background-size: cover; background-position: center;">
-    <div style="background-color: rgba(0, 0, 0, 0.5); height: 100%; display: flex; align-items: center; justify-content: center;">
-        <h1 style="color: white; font-size: 48px; text-align: center; margin: 0;">About Gourmet Delights</h1>
+<div class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?gourmet'); height: 400px; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="background-color: rgba(0, 0, 0, 0.6); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+        <h1 style="color: white; font-size: 48px; text-align: center; padding: 20px;">About Gourmet Delights</h1>
     </div>
 </div>
 
 <div class="container py-5">
-    <h2 class="text-center">Our Story</h2>
-    <p class="lead text-center">Gourmet Delights began with a simple passion for fine food and has grown into a community of culinary enthusiasts.</p>
-    <div class="row">
-        <div class="col-md-6">
-            <img src="https://source.unsplash.com/500x500/?chef" alt="Our Chef" class="img-fluid rounded-circle mb-3">
+    <section style="background-color: #fafafa; padding: 50px 20px;">
+        <h2 class="text-center">Our Story</h2>
+        <p class="lead text-center">Gourmet Delights began with a simple passion for fine food and has grown into a community of culinary enthusiasts.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://source.unsplash.com/500x500/?chef" alt="Our Chef" class="img-fluid rounded mb-3" style="max-width: 100%; height: auto; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);">
+            </div>
+            <div class="col-md-6">
+                <p>We started as a small bakery in the heart of New York City. Our founder, a classically trained pastry chef, wanted to share her passion for exquisite pastries and sophisticated cuisine with the world. Today, Gourmet Delights is a haven for those who seek the finest ingredients and innovative culinary creations.</p>
+                <p>Our commitment to quality is unmatched, sourcing only the best local and international ingredients for our dishes. Each product is a testament to our love for fine food and our dedication to culinary excellence.</p>
+            </div>
         </div>
-        <div class="col-md-6">
-            <p>We started as a small bakery in the heart of New York City. Our founder, a classically trained pastry chef, wanted to share her passion for exquisite pastries and sophisticated cuisine with the world. Today, Gourmet Delights is a haven for those who seek the finest ingredients and innovative culinary creations.</p>
-            <p>Our commitment to quality is unmatched, sourcing only the best local and international ingredients for our dishes. Each product is a testament to our love for fine food and our dedication to culinary excellence.</p>
-        </div>
-    </div>
+    </section>
 
-    <h2 class="mt-5 text-center">Why Choose Us?</h2>
-    <p class="text-center">Discover what makes us a favorite among food enthusiasts.</p>
-    <div class="row text-center">
-        <div class="col-md-4">
-            <img src="https://source.unsplash.com/200x200/?ingredients" alt="Quality Ingredients" class="img-fluid rounded-circle mb-3">
-            <h3>Quality Ingredients</h3>
-            <p>Only the finest ingredients selected for their freshness and flavor.</p>
+    <section style="background-color: #fff; padding: 50px 20px;">
+        <h2 class="text-center">Why Choose Us?</h2>
+        <p class="text-center">Discover what makes us a favorite among food enthusiasts.</p>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="https://source.unsplash.com/200x200/?ingredients" alt="Quality Ingredients" class="img-fluid rounded-circle mb-3">
+                <h3>Quality Ingredients</h3>
+                <p>Only the finest ingredients selected for their freshness and flavor.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://source.unsplash.com/200x200/?kitchen" alt="Expert Chefs" class="img-fluid rounded-circle mb-3">
+                <h3>Expert Chefs</h3>
+                <p>Our chefs are celebrated culinary artists who bring creativity to every dish.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://source.unsplash.com/200x200/?dining" alt="Exceptional Service" class="img-fluid rounded-circle mb-3">
+                <h3>Exceptional Service</h3>
+                <p>Our team is dedicated to providing an exceptional dining experience for every guest.</p>
+            </div>
         </div>
-        <div class="col-md-4">
-            <img src="https://source.unsplash.com/200x200/?kitchen" alt="Expert Chefs" class="img-fluid rounded-circle mb-3">
-            <h3>Expert Chefs</h3>
-            <p>Our chefs are celebrated culinary artists who bring creativity to every dish.</p>
-        </div>
-        <div class="col-md-4">
-            <img src="https://source.unsplash.com/200x200/?dining" alt="Exceptional Service" class="img-fluid rounded-circle mb-3">
-            <h3>Exceptional Service</h3>
-            <p>Our team is dedicated to providing an exceptional dining experience for every guest.</p>
-        </div>
-    </div>
+    </section>
 
-    <h2 class="mt-5 text-center">Sustainability Commitment</h2>
-    <p class="text-center">We believe in sustainability and strive to make a positive impact on the environment and our community.</p>
-    <p>At Gourmet Delights, we are committed to sustainability by reducing waste, using eco-friendly packaging, and supporting local farmers. We believe that great food should not only taste good but also do good for the world.</p>
+    <section style="background-color: #fafafa; padding: 50px 20px;">
+        <h2 class="text-center">Sustainability Commitment</h2>
+        <p class="text-center">We believe in sustainability and strive to make a positive impact on the environment and our community.</p>
+        <p>At Gourmet Delights, we are committed to sustainability by reducing waste, using eco-friendly packaging, and supporting local farmers. We believe that great food should not only taste good but also do good for the world.</p>
+    </section>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', () => {
+        let scrollPosition = window.scrollY;
+        let heroSection = document.querySelector('.hero');
+        heroSection.style.opacity = 1 - scrollPosition / 500;
+    });
+});
+</script>
 
 {% endblock %}
