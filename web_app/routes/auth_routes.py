@@ -43,18 +43,18 @@ def google_oauth_callback():
         #>     'picture': 'https://lh3.googleusercontent.com/a/______',
         #>     'sub': '______'
         #> }
-        print("USER INFO:", user_info["sekharan0906@gmail.com"], user_info["Shruti Sekharan"])
+        print("USER INFO:", user_info["email"], user_info["name"])
 
         # add user info to the session:
         session["current_user"] = user_info
 
         # consider storing the user login info in the database:
         Login.create({
-        "email": user_info["sekharan0906@gmail.com"],
-        "verified": user_info["sekharan0906@gmail.com"],
-        "first_name": user_info["Shruti"],
-        "last_name": user_info["Sekharan"],
-        "profile_photo_url": user_info["picture"],
+            "email": user_info["email"],
+            "verified": user_info["email_verified"],
+            "first_name": user_info["given_name"],
+            "last_name": user_info["family_name"],
+            "profile_photo_url": user_info["picture"],
         })
 
     else:
