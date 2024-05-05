@@ -4,49 +4,57 @@
 {% block content %}
 
 <!-- Hero Section -->
-<section style="background-image: url('https://source.unsplash.com/1600x900/?gourmet-food-no-brand'); background-size: cover; background-position: center; padding: 100px 0;">
-    <div class="container text-center" style="color: #fff;">
-        <h1>Welcome to Our Website!</h1>
-        <p class="lead">Explore our services and products.</p>
-        <a href="#services" class="btn btn-primary" style="font-size: 18px; padding: 10px 20px;">Learn More</a>
+<section style="background-image: url('https://source.unsplash.com/1600x900/?gourmet-food'); background-size: cover; background-position: center; padding: 100px 0; display: flex; align-items: center; justify-content: center;">
+    <div style="text-align: center; background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+        <h1 style="color: white; font-size: 48px; margin: 0;">Welcome to Gourmet Delights</h1>
+        <p class="lead" style="color: white; font-size: 24px;">Discover the art of fine cuisine with us.</p>
+        <a href="#why-choose-us" class="btn btn-primary" style="font-size: 18px; padding: 10px 20px;">Explore Our Offerings</a>
     </div>
 </section>
 
 <!-- Why Choose Us -->
-<section style="padding: 50px 0; background-color: #f8f9fa;">
+<section id="why-choose-us" style="padding: 50px 0; background-color: #fff;">
     <div class="container">
         <h2 class="text-center">Why Choose Us</h2>
-        <p class="text-center">We provide top quality services and solutions. Here’s why we stand out:</p>
+        <p class="lead text-center">Uncover the reasons behind our unmatched quality and service.</p>
         <div class="row">
             <div class="col-md-4 text-center">
-                <img src="https://source.unsplash.com/200x200/?tech" alt="Innovative Solutions" style="border-radius: 50%;">
-                <h3>Innovation</h3>
-                <p>We bring cutting-edge solutions to enhance your business.</p>
+                <img src="https://source.unsplash.com/200x200/?gourmet" alt="Innovative Solutions" style="border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+                <h3>Exquisite Flavors</h3>
+                <p>Our dishes are crafted with a unique blend of fresh, high-quality ingredients and innovative cooking techniques to ensure every bite is a delight.</p>
             </div>
             <div class="col-md-4 text-center">
-                <img src="https://source.unsplash.com/200x200/?customer-service" alt="Customer Service" style="border-radius: 50%;">
-                <h3>Support</h3>
-                <p>24/7 customer support to ensure seamless service delivery.</p>
+                <img src="https://source.unsplash.com/200x200/?restaurant" alt="Customer Service" style="border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+                <h3>World-Class Chefs</h3>
+                <p>Our team includes internationally renowned chefs who bring a wealth of knowledge and passion to our kitchen.</p>
             </div>
             <div class="col-md-4 text-center">
-                <img src="https://source.unsplash.com/200x200/?quality" alt="Quality Assurance" style="border-radius: 50%;">
-                <h3>Quality</h3>
-                <p>We guarantee high-quality outcomes for all our products and services.</p>
+                <img src="https://source.unsplash.com/200x200/?dining" alt="Quality Assurance" style="border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+                <h3>Impeccable Service</h3>
+                <p>From your first interaction to the last bite, our staff ensures a seamless and luxurious dining experience.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- About Us -->
-<section style="padding: 50px 0; background-color: #fff;">
+<!-- Our Story -->
+<section style="padding: 50px 0; background-color: #f8f9fa;">
     <div class="container">
-        <h2 class="text-center">About Us</h2>
-        <p class="text-center">We are dedicated to providing exceptional service and maintaining long-term customer satisfaction.</p>
+        <h2 class="text-center">Our Story</h2>
+        <p class="lead text-center">Gourmet Delights is not just a business; it's a journey of passion and dedication to culinary excellence.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://source.unsplash.com/500x500/?kitchen" alt="Our Kitchen" class="img-fluid rounded mb-3" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+            <div class="col-md-6">
+                <p>Founded over a decade ago in the quaint streets of Paris, Gourmet Delights has grown from a small patisserie into a culinary empire spanning continents. At the heart of our success is our commitment to an authentic dining experience and the pursuit of perfection in every dish we serve.</p>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Contact Us -->
-<section style="padding: 50px 0; background-color: #f8f9fa;">
+<section id="contact" style="padding: 50px 0; background-color: #fff;">
     <div class="container">
         <h2 class="text-center">Contact Us</h2>
         <form class="row g-3">

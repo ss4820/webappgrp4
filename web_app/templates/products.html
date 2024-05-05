@@ -1,40 +1,38 @@
 {% extends "bootstrap_5_layout.html" %}
-{% set page_title = "Products Page" %}
+{% set page_title = "Explore Our Gourmet Selections" %}
 {% set active_page = "products" %}
 
 {% block content %}
 
 <!-- Hero Image Section -->
-<div class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?gourmet-food-no-brand'); height: 300px; background-size: cover; background-position: center; position: relative;">
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center;">
+<div class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?gourmet-food'); height: 400px; background-size: cover; background-position: center; position: relative;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center;">
         <div style="text-align: center; color: white;">
-            <h1 style="font-size: 48px; font-weight: bold; margin: 0;">Discover Our Products</h1>
-            <p style="font-size: 24px; font-weight: light; margin-top: 8px;">Explore our wide range of quality items</p>
+            <h1 style="font-size: 48px; font-weight: bold; padding: 20px;">Discover Our Exquisite Products</h1>
+            <p style="font-size: 24px;">From local artisans to global flavours, explore the finest in gourmet cuisine.</p>
         </div>
     </div>
 </div>
 
 <div class="container py-5">
-    <h1 class="text-center">Products</h1>
-    <p class="lead text-center">Explore our wide range of products.</p>
+    <h2 class="text-center" style="font-size: 32px; margin-bottom: 30px;">Our Products</h2>
 
     {% if products|length > 0 %}
     <div class="row">
         {% for product in products %}
         <div class="col-md-4 mb-4">
-            <div class="card h-100" style="border-radius: 10px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); transition: transform .2s;">
-                <img class="card-img-top" src="{{ product.url }}" alt="Image of {{ product.name }}" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+            <div class="card h-100" style="border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+                <img class="card-img-top" src="{{ product.url }}" alt="Image of {{ product.name }}" style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 300px; object-fit: cover;">
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p class="card-text">{{ product.description }}</p>
-                    <!-- CREATE ORDER -->
                     <form method="POST" action="/user/orders/create" style="display: inline;">
                         <input type="hidden" name="product_id" value="{{ product.id }}">
                         <input type="hidden" name="product_name" value="{{ product.name }}">
                         <input type="hidden" name="product_description" value="{{ product.description }}">
                         <input type="hidden" name="product_price" value="{{ product.price }}">
                         <input type="hidden" name="product_url" value="{{ product.url }}">
-                        <button type="submit" class="btn btn-outline-primary">Order now!</button>
+                        <button type="submit" class="btn btn-primary">Order now!</button>
                     </form>
                 </div>
             </div>
