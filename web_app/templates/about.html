@@ -1,13 +1,52 @@
 {% extends "bootstrap_5_layout.html" %}
-{% set page_title = "About Page" %}
+{% set page_title = "About Us - Gourmet Delights" %}
 {% set active_page = "about" %}
 
 {% block content %}
 
-    <h1>About</h1>
+<!-- Hero Section -->
+<div class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?gourmet'); height: 400px; background-size: cover; background-position: center;">
+    <div style="background-color: rgba(0, 0, 0, 0.5); height: 100%; display: flex; align-items: center; justify-content: center;">
+        <h1 style="color: white; font-size: 48px; text-align: center; margin: 0;">About Gourmet Delights</h1>
+    </div>
+</div>
 
-    <p class="lead">This is the about page</p>
+<div class="container py-5">
+    <h2 class="text-center">Our Story</h2>
+    <p class="lead text-center">Gourmet Delights began with a simple passion for fine food and has grown into a community of culinary enthusiasts.</p>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="https://source.unsplash.com/500x500/?chef" alt="Our Chef" class="img-fluid rounded-circle mb-3">
+        </div>
+        <div class="col-md-6">
+            <p>We started as a small bakery in the heart of New York City. Our founder, a classically trained pastry chef, wanted to share her passion for exquisite pastries and sophisticated cuisine with the world. Today, Gourmet Delights is a haven for those who seek the finest ingredients and innovative culinary creations.</p>
+            <p>Our commitment to quality is unmatched, sourcing only the best local and international ingredients for our dishes. Each product is a testament to our love for fine food and our dedication to culinary excellence.</p>
+        </div>
+    </div>
 
-    <p>Here is some more info!</p>
+    <h2 class="mt-5 text-center">Why Choose Us?</h2>
+    <p class="text-center">Discover what makes us a favorite among food enthusiasts.</p>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <img src="https://source.unsplash.com/200x200/?ingredients" alt="Quality Ingredients" class="img-fluid rounded-circle mb-3">
+            <h3>Quality Ingredients</h3>
+            <p>Only the finest ingredients selected for their freshness and flavor.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="https://source.unsplash.com/200x200/?kitchen" alt="Expert Chefs" class="img-fluid rounded-circle mb-3">
+            <h3>Expert Chefs</h3>
+            <p>Our chefs are celebrated culinary artists who bring creativity to every dish.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="https://source.unsplash.com/200x200/?dining" alt="Exceptional Service" class="img-fluid rounded-circle mb-3">
+            <h3>Exceptional Service</h3>
+            <p>Our team is dedicated to providing an exceptional dining experience for every guest.</p>
+        </div>
+    </div>
+
+    <h2 class="mt-5 text-center">Sustainability Commitment</h2>
+    <p class="text-center">We believe in sustainability and strive to make a positive impact on the environment and our community.</p>
+    <p>At Gourmet Delights, we are committed to sustainability by reducing waste, using eco-friendly packaging, and supporting local farmers. We believe that great food should not only taste good but also do good for the world.</p>
+</div>
 
 {% endblock %}
