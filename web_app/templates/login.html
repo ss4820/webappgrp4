@@ -5,27 +5,50 @@
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='strike.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='google-login.css') }}">
+    <!-- Additional custom styles -->
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center fixed; 
+            background-size: cover;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .google-login-button {
+            background-color: #4285F4; /* Google blue */
+            color: white;
+            border: none;
+        }
+        .google-login-button:hover {
+            background-color: #357AE8;
+            border: none;
+        }
+        .google-logo {
+            width: 20px;
+            margin-right: 10px;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}
 
-    <div class="container" style="max-width: 350px;">
-        <h1>Login</h1>
-
-        <p class="lead mb-3">For new or existing users.</p>
-
-        <div class="d-grid gap-2">
-            <a href="/auth/google/login" class="google-login-button btn btn-block position-relative">
-                <span class="google-login-button-wrapper position-absolute top-50 start-0 translate-middle-y">
-                    <img class="google-logo"
-                        src="{{ url_for('static', filename='google-button/rainbow-g-logo.svg') }}"
-                        alt="Rainbow G Logo"
-                    >
-                </span>
-
-                <span class="google-login-button-text">Login with Google</span>
-            </a>
-        </div>
+<div class="container" style="max-width: 350px; margin: 100px auto;">
+    <h1>Login</h1>
+    <p class="lead mb-3">For new or existing users.</p>
+    <div class="d-grid gap-2">
+        <a href="/auth/google/login" class="google-login-button btn btn-block position-relative">
+            <span class="google-login-button-wrapper position-absolute top-50 start-0 translate-middle-y">
+                <img class="google-logo"
+                    src="{{ url_for('static', filename='google-button/rainbow-g-logo.svg') }}"
+                    alt="Rainbow G Logo"
+                >
+            </span>
+            <span class="google-login-button-text">Login with Google</span>
+        </a>
     </div>
+</div>
 
 {% endblock %}
