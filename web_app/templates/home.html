@@ -4,49 +4,52 @@
 {% block content %}
 
 <!-- Hero Section -->
-<section style="background-image: url('https://source.unsplash.com/1600x900/?nature,water'); background-size: cover; background-position: center; padding: 100px 0;">
+<section class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?modern,office'); background-size: cover; background-position: center; padding: 100px 0;">
     <div class="container text-center" style="color: #fff;">
-        <h1>Welcome to Our Website!</h1>
-        <p class="lead">Explore our services and products.</p>
-        <a href="#services" class="btn btn-primary" style="font-size: 18px; padding: 10px 20px;">Learn More</a>
+        <h1>Welcome to Our Company!</h1>
+        <p class="lead">Explore our innovative solutions and services.</p>
+        <p>
+            <a href="#services" class="btn btn-primary" style="font-size: 18px; padding: 10px 20px;">Learn More</a>
+            <a href="#contact" class="btn btn-secondary" style="font-size: 18px; padding: 10px 20px;">Contact Us</a>
+        </p>
     </div>
 </section>
 
 <!-- Why Choose Us -->
-<section style="padding: 50px 0; background-color: #f8f9fa;">
+<section id="services" style="padding: 50px 0; background-color: #f8f9fa;">
     <div class="container">
         <h2 class="text-center">Why Choose Us</h2>
-        <p class="text-center">We provide top quality services and solutions. Here’s why we stand out:</p>
+        <p class="text-center">Top reasons to choose us over competitors.</p>
         <div class="row">
             <div class="col-md-4 text-center">
-                <img src="https://source.unsplash.com/200x200/?tech" alt="Innovative Solutions" style="border-radius: 50%;">
+                <img src="https://source.unsplash.com/200x200/?innovation" alt="Innovative Solutions" style="border-radius: 50%;">
                 <h3>Innovation</h3>
-                <p>We bring cutting-edge solutions to enhance your business.</p>
+                <p>Innovative solutions to boost your business growth.</p>
             </div>
             <div class="col-md-4 text-center">
-                <img src="https://source.unsplash.com/200x200/?customer-service" alt="Customer Service" style="border-radius: 50%;">
+                <img src="https://source.unsplash.com/200x200/?support" alt="Customer Support" style="border-radius: 50%;">
                 <h3>Support</h3>
-                <p>24/7 customer support to ensure seamless service delivery.</p>
+                <p>Round-the-clock support for all your queries and issues.</p>
             </div>
             <div class="col-md-4 text-center">
                 <img src="https://source.unsplash.com/200x200/?quality" alt="Quality Assurance" style="border-radius: 50%;">
                 <h3>Quality</h3>
-                <p>We guarantee high-quality outcomes for all our products and services.</p>
+                <p>Unmatched quality to exceed your expectations.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- About Us -->
-<section style="padding: 50px 0; background-color: #fff;">
+<section id="about" style="padding: 50px 0; background-color: #fff;">
     <div class="container">
         <h2 class="text-center">About Us</h2>
-        <p class="text-center">We are dedicated to providing exceptional service and maintaining long-term customer satisfaction.</p>
+        <p class="text-center">Learn more about our company and our commitment to quality and customer satisfaction.</p>
     </div>
 </section>
 
 <!-- Contact Us -->
-<section style="padding: 50px 0; background-color: #f8f9fa;">
+<section id="contact" style="padding: 50px 0; background-color: #f8f9fa;">
     <div class="container">
         <h2 class="text-center">Contact Us</h2>
         <form class="row g-3">
@@ -67,15 +70,15 @@
 </section>
 
 <!-- Newsletter Subscription -->
-<section style="padding: 50px 0; background-color: #333; color: #fff;">
+<footer class="footer-section" style="padding: 50px 0; background-color: #333; color: #fff;">
     <div class="container text-center">
         <h2>Subscribe to Our Newsletter</h2>
-        <p>Stay updated with our latest news and offerings.</p>
+        <p>Get the latest updates and offers.</p>
         <form class="form-inline justify-content-center">
             <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Enter your email" required>
             <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
         </form>
     </div>
-</section>
+</footer>
 
 {% endblock %}
