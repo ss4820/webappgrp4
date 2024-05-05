@@ -42,6 +42,30 @@
     <!-- HEAD BLOCK (ALLOWS CHILD PAGES TO INJECT HEAD CONTENT)  -->
     {% block head %}
     {% endblock %}
+
+<style>
+    body, h1, h2, h3, p { font-family: 'Montserrat', sans-serif; }
+    .navbar, footer { background-color: #f8f9fa; border-bottom: 1px solid #dee2e6; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .navbar-dark .navbar-nav .nav-link { color: #343a40; transition: color 0.3s ease-in-out; }
+    .navbar-dark .navbar-nav .nav-link:hover { color: #000; }
+    footer { padding: 20px 0; color: #6c757d; font-size: 14px; }
+    .btn-close { filter: invert(1); }
+    /* Responsive and modern look for the layout */
+    @media (max-width: 768px) {
+        .navbar { background-color: #fff; }
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    });
+</script>
 </head>
 <body>
 
