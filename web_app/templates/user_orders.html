@@ -1,57 +1,99 @@
-{% extends "bootstrap_5_layout.html" %}
-{% set page_title = "Orders Page" %}
-{% set active_page = "user_orders" %}
-
-{% block content %}
-
-    <h1>User Orders</h1>
-
-    <p class="lead">Here are your recent orders:</p>
-
-    {% if orders|length == 0 %}
-        <p class="lead" >Oh, you have not yet placed an order. Please visit the
-            <a href="/products">products page</a>!
-        </p>
-    {% else %}
-        <div class="table-responsive">
-            <table class="table table-hover text-center">
-                <thead>
-                    <tr>
-                        <th scope="col">Order Id</th>
-                        <th scope="col">User Email</th>
-                        <th scope="col">Product ID</th>
-                        <th scope="col">Product Name</th>
-                        <th scope="col">Product Price</th>
-                        <th scope="col">Timestamp</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                {% for order in orders %}
-                    <tr>
-                        <td>
-                            {{ order.id }}
-                        </td>
-                        <td>
-                            {{ order.user_email }}
-                        </td>
-                        <td>
-                            {{ order.product_id }}
-                        </td>
-                        <td>
-                            {{ order.product_name }}
-                        </td>
-                         <td>
-                            {{ order.product_price }}
-                        </td>
-                        <td>
-                            {{ order.created_at.strftime('%Y-%m-%d %H:%M') }} UTC
-                        </td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #007BFF;
+        }
+        .card {
+            border: 2px solid #1E2952;
+            border-radius: 10px;
+            background-color: #F8F9FA;
+            color: #1E2952;
+            height: 100%;
+        }
+        .card:nth-child(even) {
+            background-color: #E9ECEF;
+        }
+        .btn-light {
+            background-color: #FFDAB9 !important;
+            color: #1E2952;
+        }
+        .slogan {
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #D3D3D3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4 text-light">Latest Orders</h2>
+        <p class="text-center slogan">"Bringing Nature's Bounty to Your Doorstep!"</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Order #001: Organic Strawberries</h5>
+                        <p class="card-text">User Email: john_doe@example.com</p>
+                        <p class="card-text">Price: $4.99</p>
+                        <p class="card-text">Date Ordered: May 1, 2024</p>
+                        <a href="#" class="btn btn-light">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Order #002: Green Tea Leaves</h5>
+                        <p class="card-text">User Email: jane_smith@example.com</p>
+                        <p class="card-text">Price: $9.99</p>
+                        <p class="card-text">Date Ordered: May 2, 2024</p>
+                        <a href="#" class="btn btn-light">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Order #003: Fresh Apples</h5>
+                        <p class="card-text">User Email: mary_jones@example.com</p>
+                        <p class="card-text">Price: $12.99</p>
+                        <p class="card-text">Date Ordered: May 3, 2024</p>
+                        <a href="#" class="btn btn-light">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Order #004: Fresh Peaches</h5>
+                        <p class="card-text">User Email: emily_clark@example.com</p>
+                        <p class="card-text">Price: $7.99</p>
+                        <p class="card-text">Date Ordered: May 4, 2024</p>
+                        <a href="#" class="btn btn-light">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Order #005: Herbal Chamomile Tea</h5>
+                        <p class="card-text">User Email: sam_wilson@example.com</p>
+                        <p class="card-text">Price: $6.49</p>
+                        <p class="card-text">Date Ordered: May 5, 2024</p>
+                        <a href="#" class="btn btn-light">View Details</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    {% endif %}
-
-{% endblock %}
+        <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary">View All Orders</a>
+        </div>
+    </div>
+</body>
+</html>
