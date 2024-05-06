@@ -20,12 +20,6 @@ class Product(BaseModel):
             'description': 'An individually-prepared tea or coffee of choice.',
             'price': 3.49,
             'url': 'https://picsum.photos/id/225/360/200'
-        },
-        {
-            'name': 'Textbook',
-            'description': 'It has all the answers.',
-            'price': 129.99,
-            'url': 'https://picsum.photos/id/24/360/200'
         }
     ]
 
