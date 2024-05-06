@@ -5,26 +5,24 @@
 {% block content %}
 
 <!-- Hero Image Section -->
-<div class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?gourmet-food'); height: 30vw; background-size: cover; background-position: center; position: relative;">
+<div class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?gourmet-food'); height: 400px; background-size: cover; background-position: center; position: relative;">
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center;">
         <div style="text-align: center; color: white;">
-            <h1 style="font-size: calc(16px + 1.5vw); font-weight: bold; padding: 20px;">Discover Our Exquisite Products</h1>
-            <p style="font-size: calc(10px + 0.5vw);">From local artisans to global flavours, explore the finest in gourmet cuisine.</p>
+            <h1 style="font-size: 48px; font-weight: bold; padding: 20px;">Discover Our Exquisite Products</h1>
+            <p style="font-size: 24px;">From local artisans to global flavours, explore the finest in gourmet cuisine.</p>
         </div>
     </div>
 </div>
 
 <div class="container py-5">
-    <h2 class="text-center" style="font-size: calc(14px + 1vw); margin-bottom: 2vw;">Our Products</h2>
+    <h2 class="text-center" style="font-size: 32px; margin-bottom: 30px;">Our Products</h2>
 
     {% if products|length > 0 %}
     <div class="row">
         {% for product in products %}
         <div class="col-md-4 mb-4">
-            <div class="card h-100" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); overflow: hidden; position: relative;">
-                <div class="card-img-container" style="height: 40vw; max-height: 300px; overflow: hidden;">
-                    <img class="card-img-top" src="{{ product.url }}" alt="Image of {{ product.name }}" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.3s ease;">
-                </div>
+            <div class="card h-100" style="border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+                <img class="card-img-top" src="{{ product.url }}" alt="Image of {{ product.name }}" style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 300px; object-fit: cover;">
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p class="card-text">{{ product.description }}</p>
@@ -48,14 +46,10 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const cards = document.querySelectorAll('.card-img-container');
+    const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.children[0].style.transform = 'scale(1.1)';
-        });
-        card.addEventListener('mouseleave', () => {
-            card.children[0].style.transform = 'scale(1)';
-        });
+        card.addEventListener('mouseover', () => card.style.transform = 'scale(1.05)');
+        card.addEventListener('mouseout', () => card.style.transform = 'scale(1)');
     });
 });
 </script>

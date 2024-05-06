@@ -1,0 +1,44 @@
+{% extends "bootstrap_5_layout.html" %}
+{% set page_title = "Orders Page" %}
+{% set active_page = "user_orders" %}
+
+{% block content %}
+<section class="p-3">
+    <h1 class="display-4">User Orders</h1>
+    <p class="lead">Here are your recent orders:</p>
+
+    {% if orders|length == 0 %}
+        <div class="alert alert-info" role="alert">
+            Oh, you have not yet placed an order. Please visit the
+            <a href="/products" class="alert-link">products page</a> to start shopping!
+        </div>
+    {% else %}
+        <div class="table-responsive">
+            <table class="table table-hover table-striped text-center align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Order Id</th>
+                        <th scope="col">User Email</th>
+                        <th scope="col">Product ID</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Product Price</th>
+                        <th scope="col">Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                    <tr>
+                        <td>{{ order.id }}</td>
+                        <td>{{ order.user_email }}</td>
+                        <td>{{ order.product_id }}</td>
+                        <td>{{ order.product_name }}</td>
+                        <td>{{ order.product_price }}</td>
+                        <td>{{ order.created_at.strftime('%Y-%m-%d %H:%M') }} UTC</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+</section>
+{% endblock %}

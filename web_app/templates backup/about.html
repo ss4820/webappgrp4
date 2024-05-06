@@ -4,16 +4,16 @@
 
 {% block content %}
 
-<!-- Hero Section with Dynamic Opacity Change on Scroll -->
-<div class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?gourmet'); height: 30vw; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+<!-- Hero Section -->
+<div class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?gourmet'); height: 400px; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
     <div style="background-color: rgba(0, 0, 0, 0.6); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-        <h1 style="color: white; font-size: calc(20px + 1.5vw); text-align: center; padding: 20px;">About Gourmet Delights</h1>
+        <h1 style="color: white; font-size: 48px; text-align: center; padding: 20px;">About Gourmet Delights</h1>
     </div>
 </div>
 
 <div class="container py-5">
-    <section style="background-color: #fafafa; padding: 4vw 3vw; transition: all 0.3s ease-out;">
-        <h2 class="text-center" style="font-size: calc(16px + 0.75vw);">Our Story</h2>
+    <section style="background-color: #fafafa; padding: 50px 20px;">
+        <h2 class="text-center">Our Story</h2>
         <p class="lead text-center">Gourmet Delights began with a simple passion for fine food and has grown into a community of culinary enthusiasts.</p>
         <div class="row">
             <div class="col-md-6">
@@ -26,30 +26,30 @@
         </div>
     </section>
 
-    <section style="background-color: #fff; padding: 4vw 3vw;">
-        <h2 class="text-center" style="font-size: calc(16px + 0.75vw);">Why Choose Us?</h2>
+    <section style="background-color: #fff; padding: 50px 20px;">
+        <h2 class="text-center">Why Choose Us?</h2>
         <p class="text-center">Discover what makes us a favorite among food enthusiasts.</p>
         <div class="row text-center">
             <div class="col-md-4">
                 <img src="https://source.unsplash.com/200x200/?ingredients" alt="Quality Ingredients" class="img-fluid rounded-circle mb-3">
-                <h3 style="font-size: calc(14px + 0.5vw);">Quality Ingredients</h3>
+                <h3>Quality Ingredients</h3>
                 <p>Only the finest ingredients selected for their freshness and flavor.</p>
             </div>
             <div class="col-md-4">
                 <img src="https://source.unsplash.com/200x200/?kitchen" alt="Expert Chefs" class="img-fluid rounded-circle mb-3">
-                <h3 style="font-size: calc(14px + 0.5vw);">Expert Chefs</h3>
+                <h3>Expert Chefs</h3>
                 <p>Our chefs are celebrated culinary artists who bring creativity to every dish.</p>
             </div>
             <div class="col-md-4">
                 <img src="https://source.unsplash.com/200x200/?dining" alt="Exceptional Service" class="img-fluid rounded-circle mb-3">
-                <h3 style="font-size: calc(14px + 0.5vw);">Exceptional Service</h3>
+                <h3>Exceptional Service</h3>
                 <p>Our team is dedicated to providing an exceptional dining experience for every guest.</p>
             </div>
         </div>
     </section>
 
-    <section style="background-color: #fafafa; padding: 4vw 3vw;">
-        <h2 class="text-center" style="font-size: calc(16px + 0.75vw);">Sustainability Commitment</h2>
+    <section style="background-color: #fafafa; padding: 50px 20px;">
+        <h2 class="text-center">Sustainability Commitment</h2>
         <p class="text-center">We believe in sustainability and strive to make a positive impact on the environment and our community.</p>
         <p>At Gourmet Delights, we are committed to sustainability by reducing waste, using eco-friendly packaging, and supporting local farmers. We believe that great food should not only taste good but also do good for the world.</p>
     </section>
@@ -57,20 +57,10 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const heroText = document.querySelector('.hero h1');
     window.addEventListener('scroll', () => {
         let scrollPosition = window.scrollY;
-        heroText.style.transform = `translateY(${scrollPosition / 2}px)`;
-        heroText.style.opacity = 1 - scrollPosition / 500;
-    });
-
-    const storySection = document.querySelector('section:first-of-type');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            storySection.style.backgroundColor = '#e2e2e2';
-        } else {
-            storySection.style.backgroundColor = '#fafafa';
-        }
+        let heroSection = document.querySelector('.hero');
+        heroSection.style.opacity = 1 - scrollPosition / 500;
     });
 });
 </script>
